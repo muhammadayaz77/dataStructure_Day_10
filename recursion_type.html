@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect Recursion</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let money = 100;
+    let apple = 0;
+
+    function buyApple(x){
+            if(x>=0)
+            {
+                console.log(`i have ${x} Rs and ${apple} Apple`)
+                buyMore(x);
+            }
+    }
+    function buyMore(x){
+        apple++
+        buyApple(x-5);
+    }
+    buyApple(money);
+</script>
+</html>
